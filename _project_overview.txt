@@ -1,19 +1,29 @@
-POT-Project-Overview-Tool  (228 lines)
-├── Tools/
-│   ├── project_overview.py            213
-├── _project_overview.txt           13
-├── requirements.txt                 2
+Root: POT-Project-Overview-Tool
 ──────────────────────────────────────────────────────────────────────
-Dirs: 2      Files: 3      Counted: 2
-Total source lines: 228
 
-By extension:
-  Ext      Lines       %
-  .py           213   93.42%
-  .txt           15    6.58%
 
-Top 10 largest files:
-  File                                              Lines       %  
-  Tools\project_overview.py                              213   93.42% 
-  _project_overview.txt                                   13    5.70% 
-  requirements.txt                                         2    0.88% 
+├── project_overview.egg-info/
+│   ├── dependency_links.txt
+│   ├── entry_points.txt                 2
+│   ├── PKG-INFO
+│   ├── requires.txt                     8
+│   ├── SOURCES.txt                     16
+│   ├── top_level.txt                    1
+├── tests/
+│   ├── test_cli_features.py            35
+├── VLTRE/
+│   ├── __init__.py
+│   ├── add_to_path.py                  49
+│   ├── cli.py                     317
+│   ├── config.py                       94
+│   ├── config_loader.py                45
+│   ├── utils.py                        53
+├── CHANGELOG.md                    70
+├── check_dependencies.py           22
+├── LICENSE
+├── README.md                       40
+├── requirements.txt                 4
+├── setup.py                        38
+
+──────────────────────────────────────────────────────────────────────
+Dirs: 4  Files: 19  Total source lines: 794
