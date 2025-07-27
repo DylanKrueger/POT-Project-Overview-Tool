@@ -1,0 +1,19 @@
+POT-Project-Overview-Tool  (228 lines)
+├── Tools/
+│   ├── project_overview.py            213
+├── _project_overview.txt           13
+├── requirements.txt                 2
+──────────────────────────────────────────────────────────────────────
+Dirs: 2      Files: 3      Counted: 2
+Total source lines: 228
+
+By extension:
+  Ext      Lines       %
+  .py           213   93.42%
+  .txt           15    6.58%
+
+Top 10 largest files:
+  File                                              Lines       %  
+  Tools\project_overview.py                              213   93.42% 
+  _project_overview.txt                                   13    5.70% 
+  requirements.txt                                         2    0.88% 
