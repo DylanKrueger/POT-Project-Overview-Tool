@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "POT"
+version = "0.0.3"
+description = "POT - Project Overview Tool"
+authors = [{ name = "Dylan Krueger" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.8"
+
+# Dependencies
+dependencies = [
+    "matplotlib",
+    "colorama",
+    "pyperclip",
+    "psutil",
+    "tqdm"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/DylanKrueger/POT-Project-Overview-Tool/wiki"
+"Repository" = "https://github.com/DylanKrueger/POT-Project-Overview-Tool"
+"Documentation" = "https://github.com/DylanKrueger/POT-Project-Overview-Tool/blob/main/README.md"
+
+# Add this section for CLI entry point
+[project.scripts]
+POT = "VLTRE.cli:main"

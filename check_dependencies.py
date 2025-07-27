@@ -20,6 +20,7 @@ if __name__ == "__main__":
     check_module('pyperclip')
     check_module('colorama')
     check_tool('xclip')
-    check_tool('xsel')
+    check_tool('xselect')
     check_tool('pbcopy')
     check_tool('clip')
+    check_tool('matplotlib')

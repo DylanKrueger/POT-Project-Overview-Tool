@@ -2,3 +2,7 @@ colorama
 pyperclip
 psutil
 setuptools
+xclip
+pbcopy
+clip
+matplotlib

@@ -1,6 +1,5 @@
 # utils.py
 
-import argparse
 import os
 import threading
 import socketserver

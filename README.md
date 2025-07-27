@@ -56,3 +56,7 @@ pip install -e .
 
 # Install required dependencies
 pip install -r requirements.txt
+
+# uninstall CLI Tool
+chmod +x pot_cleanup.sh
+sudo ./pot_cleanup.sh
