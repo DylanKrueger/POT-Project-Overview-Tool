@@ -1,6 +1,6 @@
 import argparse
 
-def get_args():
+def parse_args():
     parser = argparse.ArgumentParser(
         description="Directory overview CLI tool: generate source code stats, visualize structure, and more."
     )
@@ -87,10 +87,30 @@ def get_args():
         help="Enable verbose output for debugging and detailed logs"
     )
     parser.add_argument(
-    "--max-depth",
-    type=int,
-    default=0,
-    help="Limit directory traversal depth (0 for unlimited)"
-)
-
+        "--max-depth",
+        type=int,
+        default=0,
+        help="Limit directory traversal depth (0 for unlimited)"
+    )
+    # New flag for saving output as text
+    parser.add_argument(
+        "--txt",
+        action="store_true",
+        help="Save the report output to a .txt file"
+    )
+    parser.add_argument(
+     "--scan",
+    action='store_true',
+    help='Generate project overview report'
+    )
+    parser.add_argument(
+    '--visualize',
+    action='store_true',
+    help='Display a pie chart of project overview statistics'
+    )
+    parser.add_argument(
+    '--save-graph',
+    action='store_true',
+    help='Save the visualization as an image instead of displaying'
+    )
     return parser.parse_args()

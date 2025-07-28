@@ -9,71 +9,31 @@
 - Web UI for interactive browsing and detailed reports.
 - Natural language summaries and project insights via LLMs.
 - Performance optimizations with async scanning and streaming output.
-- CLI commands for advanced control: `--help`, `--list-drives`, `--drive`, `--full-scan`, `--json`, `--clip`, `--depth`.
+
 
 ---
+## version[0.0.3] - 2025-06-22
+### Added
+- Implemented `--txt` flag in `cli.py` to allow users to save the project overview report to a `.txt` file explicitly. Report is only saved if `--txt` is specified; otherwise, it displays only in the console.
+- Added a banner display that appears when running `pot` with no arguments, acting as a "home screen" with stylized ASCII art and info.
+- Enforced that the project overview is generated only when `--scan` is used; otherwise, the CLI shows the banner and exits.
+- Updated `setup.py` to support cross-platform, system-wide installation of the `pot` CLI tool using `entry_points`.
+- Enhanced the CLI to support the `pot` command on Windows PowerShell, macOS Terminal, and Linux shells.
+- Improved configuration handling to support the `--txt` flag via `config.py`.
+- Added a `pot_cleanup.sh` script for easy removal of residual files and package uninstallation.
+- Improved CLI argument parsing to support a `--scan` flag that triggers project overview generation.
 
-## [v0.0.2] - 2025-07-10
-- Initial release with core features:
-  - Colourized directory tree with LOC stats for selected extensions.
-  - Drive listing on Windows and mount points on Unix/Linux.
-  - Full drive scanning and system-wide overview.
-  - JSON report output for integration and scripting.
-  - Copy report directly to clipboard (multi-platform support).
-  - Command-line interface with comprehensive help and options.
-- Dependencies managed via `requirements.txt`.
-- Included license (MIT License).
-- Detailed `README.md` for setup and usage instructions.
- **Enhanced HTML report generation:**  
-  - When using `--open-url`, the directory structure now displays **without color codes** for cleaner web presentation.
-  - Implemented a new plain-text version stripped of ANSI escape sequences for HTML export.
-- **Code refactor for clarity:**  
-  - Added comments and structure to handle HTML report creation.
-- **Bug fixes and stability improvements:**  
-  - Ensured temporary files are properly cleaned up.
-  - Fixed minor issues with path handling across platforms.
-- **Performance improvements:**  
-  - Optimized directory walking and file reading.
-- **Future-proofing:**  
-  - Prepared code for upcoming new features and flags.
-  - **Added `tests/` directory for testing purposes**.
+### Fixed
+- [Optional: list any bugs fixed in this release]
 
----
+### Deprecated
+- [Optional: list deprecated features]
 
-## **Added in this release**
-- **Directory tree overview** with:
-  - Colourized output for readability.
-  - Lines of code (LOC) stats for user-specified extensions.
-  - File size info and largest files.
-- **CLI commands** for:
-  - Scanning specific directories, entire drives, or system-wide.
-  - Listing drives on Windows and mount points on Linux/macOS.
-  - Support for filtering and ignoring common system/dependency directories.
-  - Export report to JSON or copy directly to clipboard.
-  - Opening reports in the default web browser.
-- **New flags** and their descriptions:
-  - `--full-path`: Show full absolute path of the root directory.
-  - `--show-largest`: Display the top N largest files.
-  - `--json`: Generate and save a JSON report.
-  - `--clip`: Copy the report to clipboard.
-  - `--list-drives`: List available drives or mount points.
-  - `--scan-whole`: Scan entire drive(s) if no specific root is provided.
-  - `--depth`: Limit the directory traversal depth (future flag, planned).
-  - `--top`: Specify how many of the largest files to display (default: 10).
-  - `--output`: Save the output to a specified file.
-  - `--copy`: Copy the report directly to the clipboard.
-  - `--open-url`: Open the report in the default web browser.
-  - `--verbose`: Enable verbose output for debugging.
-  - `--no-color`: Disable colored output for better compatibility.
-  - `--share-entire-pot`: Share the entire project, ignoring ignore patterns.
-  - `--max-depth`: Limit the directory traversal depth (0 for unlimited).
+### Removed
+- [Optional: list features removed in this release]
 
-## **Note:** To add more flags or options in the future:
-- Expand your argument parser in `config.py`.
-- Implement corresponding logic in `cli.py`.
-- Use the existing pattern for clean, modular code.
-
----
-
- ~~                                                                         ~~
-
+### Notes
+- Users can install the package system-wide on Windows PowerShell, macOS Terminal, and Linux shells using `pip install .`.
+- To generate and save a report as a `.txt` file, run:
+  ```bash
+  pot --scan --txt
